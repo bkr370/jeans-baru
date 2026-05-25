@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NewJeans — Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">Newjeans</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#members">Members</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="music.html">Music</a></li>
+      <li><a href="merch.html">Merch</a></li>
+      <li><a href="login.html" class="nav-login-btn">Login</a></li>
+    </ul>
+  </nav>
+
+  <section class="page-hero" data-page="GALLERY">
+    <h1 class="page-title">Gallery</h1>
+    <p class="page-subtitle">NewJeans</p>
+  </section>
+
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterGallery('all', this)">Semua</button>
+    <button class="filter-btn" onclick="filterGallery('minji', this)">Minji</button>
+    <button class="filter-btn" onclick="filterGallery('hanni', this)">Hanni</button>
+    <button class="filter-btn" onclick="filterGallery('danielle', this)">Danielle</button>
+    <button class="filter-btn" onclick="filterGallery('haerin', this)">Haerin</button>
+    <button class="filter-btn" onclick="filterGallery('hyein', this)">Hyein</button>
+  </div>
+
+  <section class="gallery-grid">
+    <div class="gallery-item tall" data-member="minji" onclick="openLightbox(this)">
+      <img src="/newjeans-minji-supernatural-4k-wallpaper-uhdpaper.com-259@3@b.jpg" alt="Minji">
+      <div class="gallery-label">Minji — Supernatural</div>
+    </div>
+    <div class="gallery-item" data-member="hanni" onclick="openLightbox(this)">
+      <img src="newjeans-hanni-supernatural-4k-wallpaper-uhdpaper.com-253@3@b.jpg" alt="Hanni">
+      <div class="gallery-label">Hanni — Supernatural</div>
+    </div>
+    <div class="gallery-item" data-member="danielle" onclick="openLightbox(this)">
+      <img src="newjeans-danielle-supernatural-4k-wallpaper-uhdpaper.com-247@3@b.jpg" alt="Danielle">
+      <div class="gallery-label">Danielle — Supernatural</div>
+    </div>
+    <div class="gallery-item wide" data-member="haerin" onclick="openLightbox(this)">
+      <img src="newjeans-haerin-supernatural-4k-wallpaper-uhdpaper.com-250@3@b.jpg" alt="Haerin">
+      <div class="gallery-label">Haerin — Supernatural</div>
+    </div>
+    <div class="gallery-item" data-member="hyein" onclick="openLightbox(this)">
+      <img src="newjeans-hyein-supernatural-4k-wallpaper-uhdpaper.com-256@3@b.jpg" alt="Hyein">
+      <div class="gallery-label">Hyein — Supernatural</div>
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    <img src="" alt="" id="lightboxImg">
+    <p id="lightboxCaption"></p>
+  </div>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="footer-logo">NEWJEANS</span>
+        <p class="footer-tagline">Fan Site</p>
+      </div>
+      <div class="footer-right">
+        <a href="mailto:bimareflisyah@gmail.com" class="footer-email">✉ bimareflisyah@gmail.com</a>
+        <div class="footer-socials">
+          <a href="https://instagram.com/newjeans_official" target="_blank" class="social-icon-btn" title="Instagram">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram" width="20"
+              height="20">
+          </a>
+          <a href="https://tiktok.com/@newjeans_official" target="_blank" class="social-icon-btn" title="TikTok">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/tiktok.svg" alt="TikTok" width="20"
+              height="20">
+          </a>
+          <a href="https://facebook.com/newjeans" target="_blank" class="social-icon-btn" title="Facebook">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/facebook.svg" alt="Facebook" width="20"
+              height="20">
+          </a>
+          <a href="https://twitter.com/newjeans_twt" target="_blank" class="social-icon-btn" title="X (Twitter)">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/x.svg" alt="X (Twitter)" width="20"
+              height="20">
+          </a>
+          <a href="https://youtube.com/@HYBE_LABELS" target="_blank" class="social-icon-btn" title="YouTube">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/youtube.svg" alt="YouTube" width="20"
+              height="20">
+          </a>
+          <a href="https://open.spotify.com/artist/newjeans" target="_blank" class="social-icon-btn" title="Spotify">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/spotify.svg" alt="Spotify" width="20"
+              height="20">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 BIMA EKA REFLISHA</p>
+    </div>
+  </footer>
+
+  <script>
+    function filterGallery(member, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.gallery-item').forEach(item => {
+        item.style.display = (member === 'all' || item.dataset.member === member) ? 'block' : 'none';
+      });
+    }
+    function openLightbox(el) {
+      const img = el.querySelector('img');
+      const label = el.querySelector('.gallery-label').textContent;
+      document.getElementById('lightboxImg').src = img.src;
+      document.getElementById('lightboxImg').alt = img.alt;
+      document.getElementById('lightboxCaption').textContent = label;
+      document.getElementById('lightbox').classList.add('active');
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+  </script>
+</body>
+
+</html>

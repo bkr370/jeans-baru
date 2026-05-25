@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NewJeans — Merch Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">Newjeans</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#members">Members</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="music.html">Music</a></li>
+      <li><a href="merch.html" class="active">Merch</a></li>
+      <li><a href="login.html" class="nav-login-btn">Login</a></li>
+    </ul>
+  </nav>
+
+  <section class="page-hero" data-page="MERCH">
+    <h1 class="page-title">Merch Store</h1>
+    <p class="page-subtitle">Official merchandise</p>
+  </section>
+
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterMerch('all', this)">Semua</button>
+    <button class="filter-btn" onclick="filterMerch('apparel', this)">Apparel</button>
+    <button class="filter-btn" onclick="filterMerch('photocard', this)">Photocard</button>
+    <button class="filter-btn" onclick="filterMerch('album', this)">Album</button>
+    <button class="filter-btn" onclick="filterMerch('acc', this)">Aksesoris</button>
+  </div>
+
+  <section class="merch-grid">
+
+    <div class="merch-card" data-cat="apparel">
+      <div class="merch-img-wrap">
+        <img src="T SHIRT NJ.webp" alt="NewJeans Oversized Tee">
+        <div class="merch-overlay"><button class="add-cart-btn">+ Keranjang</button></div>
+      </div>
+      <div class="merch-info">
+        <span class="merch-badge">Apparel</span>
+        <h3>NewJeans Oversized Tee</h3>
+        <p class="merch-member">All Members</p>
+        <div class="merch-price-row">
+          <span class="merch-price">Rp 300.000</span>
+          <span class="merch-stock in-stock">Tersedia</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="merch-card" data-cat="photocard">
+      <div class="merch-img-wrap">
+        <img src="NJ PHOTOCARD SET.jpg" alt="Photocard Set Supernatural">
+        <div class="merch-overlay"><button class="add-cart-btn">+ Keranjang</button></div>
+      </div>
+      <div class="merch-info">
+        <span class="merch-badge">Photocard</span>
+        <h3>Photocard Set — Supernatural</h3>
+        <p class="merch-member">5 Member Pack</p>
+        <div class="merch-price-row">
+          <span class="merch-price">Rp 750.000</span>
+          <span class="merch-stock in-stock">Tersedia</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="merch-card" data-cat="album">
+      <div class="merch-img-wrap">
+        <img src="1 ST EP ALBUM.webp" alt="New Jeans 1st EP">
+        <div class="merch-overlay"><button class="add-cart-btn">+ Keranjang</button></div>
+      </div>
+      <div class="merch-info">
+        <span class="merch-badge">Album</span>
+        <h3>New Jeans — 1st EP Bluebook</h3>
+        <p class="merch-member">Debut Album</p>
+        <div class="merch-price-row">
+          <span class="merch-price">Rp 250.000</span>
+          <span class="merch-stock in-stock">Tersedia</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="merch-card" data-cat="acc">
+      <div class="merch-img-wrap">
+        <img src="BUNINI.webp" alt="Bunny Plushie">
+        <div class="merch-overlay"><button class="add-cart-btn">+ Keranjang</button></div>
+      </div>
+      <div class="merch-info">
+        <span class="merch-badge">Aksesoris</span>
+        <h3>Bunny Plushie — Limited</h3>
+        <p class="merch-member">Official Mascot</p>
+        <div class="merch-price-row">
+          <span class="merch-price">Rp 750.000</span>
+          <span class="merch-stock sold-out">Habis</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="merch-card" data-cat="apparel">
+      <div class="merch-img-wrap">
+        <img src="BAPE JACKET.webp" alt="BAPE x NewJeans Jacket">
+        <div class="merch-overlay"><button class="add-cart-btn">+ Keranjang</button></div>
+      </div>
+      <div class="merch-info">
+        <span class="merch-badge">Apparel</span>
+        <h3>BAPE x NewJeans Shark Jacket</h3>
+        <p class="merch-member">All Members</p>
+        <div class="merch-price-row">
+          <span class="merch-price">Rp 7.500.000</span>
+          <span class="merch-stock in-stock">Tersedia</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="merch-card" data-cat="photocard">
+      <div class="merch-img-wrap">
+        <img src="HANNII.jpg" alt="Holo Photocard Hanni">
+        <div class="merch-overlay"><button class="add-cart-btn">+ Keranjang</button></div>
+      </div>
+      <div class="merch-info">
+        <span class="merch-badge">Photocard</span>
+        <h3>Holo Photocard — Hanni</h3>
+        <p class="merch-member">Hanni</p>
+        <div class="merch-price-row">
+          <span class="merch-price">Rp 350.000</span>
+          <span class="merch-stock in-stock">Tersedia</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="merch-card" data-cat="album">
+      <div class="merch-img-wrap">
+        <img src="NJ ALBUM OMG.jpg" alt="OMG 2nd EP">
+        <div class="merch-overlay"><button class="add-cart-btn">+ Keranjang</button></div>
+      </div>
+      <div class="merch-info">
+        <span class="merch-badge">Album</span>
+        <h3>OMG &amp; Ditto — 2nd EP</h3>
+        <p class="merch-member">2nd EP · 2023</p>
+        <div class="merch-price-row">
+          <span class="merch-price">Rp 250.000</span>
+          <span class="merch-stock in-stock">Tersedia</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="merch-card" data-cat="acc">
+      <div class="merch-img-wrap">
+        <img src="NJ BACKPACK.webp" alt="NJ x Murakami Bag">
+        <div class="merch-overlay"><button class="add-cart-btn">+ Keranjang</button></div>
+      </div>
+      <div class="merch-info">
+        <span class="merch-badge">Aksesoris</span>
+        <h3>NJ x Murakami Drawstring Bag</h3>
+        <p class="merch-member">Collab Edition</p>
+        <div class="merch-price-row">
+          <span class="merch-price">Rp 400.000</span>
+          <span class="merch-stock in-stock">Tersedia</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <div class="cart-toast" id="cartToast">🛒 Ditambahkan ke keranjang!</div>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="footer-logo">NEWJEANS</span>
+        <p class="footer-tagline">Fan Site</p>
+      </div>
+      <div class="footer-right">
+        <a href="mailto:bimareflisyah@gmail.com" class="footer-email">✉ bimareflisyah@gmail.com</a>
+        <div class="footer-socials">
+          <a href="https://instagram.com/newjeans_official" target="_blank" class="social-icon-btn" title="Instagram">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram" width="20"
+              height="20">
+          </a>
+          <a href="https://tiktok.com/@newjeans_official" target="_blank" class="social-icon-btn" title="TikTok">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/tiktok.svg" alt="TikTok" width="20"
+              height="20">
+          </a>
+          <a href="https://facebook.com/newjeans" target="_blank" class="social-icon-btn" title="Facebook">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/facebook.svg" alt="Facebook" width="20"
+              height="20">
+          </a>
+          <a href="https://twitter.com/newjeans_twt" target="_blank" class="social-icon-btn" title="X (Twitter)">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/x.svg" alt="X (Twitter)" width="20"
+              height="20">
+          </a>
+          <a href="https://youtube.com/@HYBE_LABELS" target="_blank" class="social-icon-btn" title="YouTube">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/youtube.svg" alt="YouTube" width="20"
+              height="20">
+          </a>
+          <a href="https://open.spotify.com/artist/newjeans" target="_blank" class="social-icon-btn" title="Spotify">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/spotify.svg" alt="Spotify" width="20"
+              height="20">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 BIMA EKA REFLISHA</p>
+    </div>
+  </footer>
+
+  <script>
+    function filterMerch(cat, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.merch-card').forEach(card => {
+        if (cat === 'all' || card.dataset.cat === cat) {
+          card.style.display = 'block';
+          card.style.animation = 'fadeUp 0.4s ease forwards';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+    document.querySelectorAll('.add-cart-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const toast = document.getElementById('cartToast');
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2200);
+      });
+    });
+  </script>
+</body>
+
+</html>
